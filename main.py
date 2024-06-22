@@ -1,5 +1,10 @@
 import os
-import luas
+from rumus_luas import rumus_luas_persegi
+from rumus_luas import rumus_luas_persegi_panjang
+from rumus_luas import rumus_luas_lingkaran
+from rumus_luas import rumus_luas_segitiga
+from rumus_luas import rumus_luas_trapesium
+
 
 def fungsi_input_pilih_operasi() -> int:
     while True:
@@ -18,7 +23,6 @@ def fungsi_input_pilih_operasi() -> int:
 def fungsi_input_pilih_luas() -> int:
     while True:
         input_luas: int = input('\nMasukkan pilihan luas: ')
-        print(' ')
         if input_luas.isdigit():
             input_luas: float = int(input_luas)
             if 1 <= input_luas <= len(pilihan_luas):
@@ -85,7 +89,29 @@ while True:
         
         # luas persegi
         if input_luas == 1:
-            luas.luas_persegi()
+            luas_persegi: float = rumus_luas_persegi()
+            print(f'Hasil luas persegi = {luas_persegi:.2f}')
+            
+        # luas persegi panjang
+        elif input_luas == 2:
+            luas_persegi_panjang: float = rumus_luas_persegi_panjang()
+            print(f'Hasil luas persegi panjang = {luas_persegi_panjang:.2f}')
+
+        # luas lingkaran
+        elif input_luas == 3:
+            luas_lingkaran: float = rumus_luas_lingkaran()
+            print(f'Hasil luas lingkaran = {luas_lingkaran:.2f}')
+        
+        # luas segitiga
+        elif input_luas == 4:
+            luas_segitiga: float = rumus_luas_segitiga()
+            print(f'Hasil luas segitiga = {luas_segitiga}')
+            
+        # luas trapesium
+        elif input_luas == 5:
+            luas_trapesium: float = rumus_luas_trapesium()
+            print(f'Hasil luas trapesium = {luas_trapesium}')
+        
         else:
             print('Maaf operasi tidak tersedia.')
             break
