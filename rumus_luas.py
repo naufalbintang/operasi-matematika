@@ -85,5 +85,36 @@ def rumus_luas_trapesium() -> float:
         
 
 # jajar genjang
-
+def rumus_luas_jajar_genjang() -> float:
+    while True:
+        input_alas: float = input('Masukkan alas: ')
+        if input_alas.isdigit():
+            input_alas: float = float(input_alas)
+            break
+        else:
+            print('Tolong masukkan angka.')
+    while True:
+        input_tinggi: float = input('Masukkan tinggi: ')
+        if input_tinggi.isdigit():
+            input_tinggi: float = float(input_tinggi)
+            break
+        else:
+            print('Tolong masukkan angka.')
+    return input_alas * input_tinggi
 # layang-layang
+def rumus_luas_layang_layang() -> float:
+    while True:
+        input_d1: float = input('Masukkan diagonal 1: ')
+        if input_d1.isdigit():
+            input_d1: float = float(input_d1)
+            break
+        else:
+            print('Tolong masukkan angka.')
+    while True:
+        input_d2: float = input('Masukkan diagonal 2: ')
+        if input_d2.isdigit():
+            input_d2: float = float(input_d2)
+            break
+        else:
+            print('Tolong masukkan angka.')
+    return input_d1 * input_d2 / 2
