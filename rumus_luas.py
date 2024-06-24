@@ -1,120 +1,133 @@
 '''module luas bangun datar'''
 
 # presegi 
-def rumus_luas_persegi() -> float:
+def rumus_luas_persegi() -> int:
     while True:
-        input_sisi: float = input('Masukkan panjang sisi: ')
-        if input_sisi.isdigit():
-            input_sisi: float = float(input_sisi)
+        input_sisi: int = input('Masukkan panjang: ')
+        try:
+            input_sisi: int = int(input_sisi)
             break
-        else:
-            print('Tolong masukkan angka.')
-    return input_sisi ** 2
+        except:
+            print('Tolong masukkan bilangan bulat.')
+            continue
+    return input_sisi
 
 # presegi panjang
-def rumus_luas_persegi_panjang() -> float:
+def rumus_luas_persegi_panjang() -> int:
     while True:
-        input_panjang: float = input('Masukkan panjang: ')
-        if input_panjang.isdigit():
-            input_panjang: float = float(input_panjang)
+        input_panjang: int = input('Masukkan panjang: ')
+        try:
+            input_panjang: int = int(input_panjang)
             break
-        else:
-            print('Tolong masukkan angka.')
+        except:
+            print('Tolong masukkan bilangan bulat.')
+            continue
     while True:
-        input_lebar: float = input('Masukkan lebar: ')
-        if input_lebar.isdigit():
-            input_lebar: float = float(input_lebar)
+        input_lebar: int = input('Masukkan lebar: ')
+        try:
+            input_lebar: int = int(input_lebar)
             break
-        else:
-            print('Tolong masukkan angka.')
-    return input_panjang * input_lebar
+        except:
+            print('Tolong masukkan bilangan bulat.')
+            continue
+    return input_panjang, input_lebar
 
 # lingkaran
-def rumus_luas_lingkaran() -> float:
+def rumus_luas_lingkaran() -> int:
     while True:
-        input_radius: float = input('Masukkan radius atau jari-jari: ')
-        if input_radius.isdigit():
-            input_radius: float = float(input_radius)
+        input_radius: int = input('Masukkan radius: ')
+        try:
+            input_radius: int = int(input_radius)
             break
-        else:
-            print('Tolong masukkan angka.')
-    return 22 / 7 * input_radius ** 2
+        except:
+            print('Tolong masukkan bilangan bulat.')
+            continue
+    return input_radius
 
 # segitiga
-def rumus_luas_segitiga() -> float:
+def rumus_luas_segitiga() -> int:
     while True:
-        input_alas: float = input('Masukkan alas: ')
-        if input_alas.isdigit():
-            input_alas: float = float(input_alas)
+        input_alas: int = input('Masukkan alas: ')
+        try:
+            input_alas: int = int(input_alas)
             break
-        else:
-            print('Tolong masukkan angka.') 
+        except:
+            print('Tolong masukkan bilangan bulat.')
+            continue
     while True:
-        input_tinggi: float = input('Masukkan tinggi: ')
-        if input_tinggi.isdigit():
-            input_tinggi: float = float(input_tinggi)
+        input_tinggi: int = input('Masukkan tinggi: ')
+        try:
+            input_tinggi: int = int(input_tinggi)
             break
-        else:
-            print('Tolong masukkan angka.')
-    return input_alas * input_tinggi / 2
+        except:
+            print('Tolong masukkan bilangan bulat.')
+            continue
+    return input_alas, input_tinggi
 
 # trapesium
-def rumus_luas_trapesium() -> float:
+def rumus_luas_trapesium() -> int:
     while True:
-        input_atas: float = input('Masukkan panjang atas: ')
-        if input_atas.isdigit():
-            input_atas: float = float(input_atas)
+        input_atas: int = input('Masukkan panjang sisi atas: ')
+        try:
+            input_atas: int = int(input_atas)
             break
-        else:
-            print('Tolong masukkan angka.')
+        except:
+            print('Tolong masukkan bilangan bulat.')
+            continue
     while True:
-        input_bawah: float = input('Masukkan panjang bawah: ')
-        if input_bawah.isdigit():
-            input_bawah: float = float(input_bawah)
+        input_bawah: int = input('Masukkan panjang sisi bawah: ')
+        try:
+            input_bawah: int = int(input_bawah)
             break
-        else:
-            print('Tolong masukkan angka.')
+        except:
+            print('Tolong masukkan bilangan bulat.')
+            continue
     while True:
-        input_tinggi: float = input('Masukkan tinggi: ')
-        if input_tinggi.isdigit():
-            input_tinggi: float = float(input_tinggi)
+        input_tinggi: int = input('Masukkan tinggi: ')
+        try:
+            input_tinggi: int = int(input_tinggi)
             break
-        else:
-            print('Tolong masukkan angka.')
-    return (input_atas + input_bawah) * input_tinggi / 2    
+        except:
+            print('Tolong masukkan bilangan bulat.')
+            continue
+    return input_atas, input_bawah, input_tinggi    
         
 
 # jajar genjang
-def rumus_luas_jajar_genjang() -> float:
+def rumus_luas_jajar_genjang() -> int:
     while True:
-        input_alas: float = input('Masukkan alas: ')
-        if input_alas.isdigit():
-            input_alas: float = float(input_alas)
+        input_alas: int = input('Masukkan panjang alas: ')
+        try:
+            input_alas: int = int(input_alas)
             break
-        else:
-            print('Tolong masukkan angka.')
+        except:
+            print('Tolong masukkan bilangan bulat.')
+            continue
     while True:
-        input_tinggi: float = input('Masukkan tinggi: ')
-        if input_tinggi.isdigit():
-            input_tinggi: float = float(input_tinggi)
+        input_tinggi: int = input('Masukkan tinggi: ')
+        try:
+            input_tinggi: int = int(input_tinggi)
             break
-        else:
-            print('Tolong masukkan angka.')
-    return input_alas * input_tinggi
+        except:
+            print('Tolong masukkan bilangan bulat.')
+            continue
+    return input_alas, input_tinggi
 # layang-layang
-def rumus_luas_layang_layang() -> float:
+def rumus_luas_layang_layang() -> int:
     while True:
-        input_d1: float = input('Masukkan diagonal 1: ')
-        if input_d1.isdigit():
-            input_d1: float = float(input_d1)
+        input_d1: int = input('Masukkan panjang diagonal 1: ')
+        try:
+            input_d1: int = int(input_d1)
             break
-        else:
-            print('Tolong masukkan angka.')
+        except:
+            print('Tolong masukkan bilangan bulat.')
+            continue
     while True:
-        input_d2: float = input('Masukkan diagonal 2: ')
-        if input_d2.isdigit():
-            input_d2: float = float(input_d2)
+        input_d2: int = input('Masukkan panjang diagonal 2: ')
+        try:
+            input_d2: int = int(input_d2)
             break
-        else:
-            print('Tolong masukkan angka.')
-    return input_d1 * input_d2 / 2
+        except:
+            print('Tolong masukkan bilangan bulat.')
+            continue
+    return input_d1, input_d2

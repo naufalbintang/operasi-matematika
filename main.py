@@ -92,38 +92,57 @@ while True:
         
         # luas persegi
         if input_luas == 1:
-            luas_persegi: float = rumus_luas.rumus_luas_persegi()
-            print(f'Hasil luas persegi = {luas_persegi:.2f}')
+            sisi: int = rumus_luas.rumus_luas_persegi()
+            luas_persegi: int = sisi ** 2
+            print(f'{sisi} x {sisi} = {luas_persegi}')
             
         # luas persegi panjang
         elif input_luas == 2:
-            luas_persegi_panjang: float = rumus_luas.rumus_luas_persegi_panjang()
-            print(f'Hasil luas persegi panjang = {luas_persegi_panjang:.2f}')
+            panjang: int
+            lebar: int
+            panjang, lebar = rumus_luas.rumus_luas_persegi_panjang()
+            luas_persegi_panjang: float = panjang * lebar
+            print(f'{panjang} x {lebar} = {luas_persegi_panjang}')
 
         # luas lingkaran
         elif input_luas == 3:
-            luas_lingkaran: float = rumus_luas.rumus_luas_lingkaran()
-            print(f'Hasil luas lingkaran = {luas_lingkaran:.2f}')
-        
+            radius: int = rumus_luas.rumus_luas_lingkaran()
+            luas_lingkaran = 22 / 7 * radius ** 2
+            print(f'22 / 7 x {radius} x {radius} = {luas_lingkaran:.2f}')
+                
+            
         # luas segitiga
         elif input_luas == 4:
-            luas_segitiga: float = rumus_luas.rumus_luas_segitiga()
-            print(f'Hasil luas segitiga = {luas_segitiga:.2f}')
+            alas: int
+            tinggi: int
+            alas, tinggi = rumus_luas.rumus_luas_segitiga()
+            luas_segitiga: float = alas * tinggi / 2
+            print(f'{alas} x {tinggi} / 2 = {luas_segitiga:.2f}')
             
         # luas trapesium
         elif input_luas == 5:
-            luas_trapesium: float = rumus_luas.rumus_luas_trapesium()
-            print(f'Hasil luas trapesium = {luas_trapesium:.2f}')
+            atas: int
+            bawah: int
+            tinggi: int
+            atas, bawah, tinggi = rumus_luas.rumus_luas_trapesium()
+            luas_trapesium: float = (atas + bawah) * tinggi / 2
+            print(f'({atas} + {bawah}) x {tinggi} / 2 = {luas_trapesium:.2f}')
             
         # luas jajar genjang
         elif input_luas == 6:
-            luas_jajar_genjang: float = rumus_luas.rumus_luas_jajar_genjang()
-            print(f'Hasil luas jajar genjang = {luas_jajar_genjang:.2f}')
+            alas: int
+            tinggi: int
+            alas, tinggi = rumus_luas.rumus_luas_jajar_genjang()
+            luas_jajar_genjang: int = alas * tinggi
+            print(f'{alas} x {tinggi} = {luas_jajar_genjang}')
         
         # luas layang-layang
         elif input_luas == 7:
-            luas_layang_layang: float = rumus_luas.rumus_luas_layang_layang()
-            print(f'Hasil luas layang-layang = {luas_layang_layang:.2f}')
+            d1: int
+            d2: int
+            d1, d2 = rumus_luas.rumus_luas_layang_layang()
+            luas_layang_layang: float = d1 * d2 / 2 
+            print(f'{d1} x {d2} / 2 = {luas_layang_layang:.2f}')
         else:
             print('Maaf operasi tidak tersedia.')
             break
