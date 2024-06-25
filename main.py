@@ -1,6 +1,6 @@
 import os
 import rumus_luas
-
+import rumus_keliling
 
 def fungsi_input_pilih_operasi() -> int:
     while True:
@@ -52,6 +52,7 @@ while True:
     ]
     
     pilihan_luas: list[str] = [
+        'Keluar',
         'Luas Persegi',
         'Luas Persegi Panjang',
         'Luas Lingkaran',
@@ -62,6 +63,7 @@ while True:
     ]
     
     pilihan_keliling: list[str] = [
+        'Keluar',
         'Keliling Persegi',
         'Keliling Persegi Panjang',
         'Keliling Lingkaran',
@@ -90,29 +92,33 @@ while True:
         # input luas
         input_luas: int = fungsi_input_pilih_luas()
         
-        # luas persegi
+        # keluar
         if input_luas == 1:
+            break
+        
+        # luas persegi
+        elif input_luas == 2:
             sisi: int = rumus_luas.rumus_luas_persegi()
             luas_persegi: int = sisi ** 2
-            print(f'{sisi} x {sisi} = {luas_persegi}')
+            print(f'{sisi} x {sisi} = {luas_persegi:.2f}')
             
         # luas persegi panjang
-        elif input_luas == 2:
+        elif input_luas == 3:
             panjang: int
             lebar: int
             panjang, lebar = rumus_luas.rumus_luas_persegi_panjang()
             luas_persegi_panjang: float = panjang * lebar
-            print(f'{panjang} x {lebar} = {luas_persegi_panjang}')
+            print(f'{panjang} x {lebar} = {luas_persegi_panjang:.2f}')
 
         # luas lingkaran
-        elif input_luas == 3:
+        elif input_luas == 4:
             radius: int = rumus_luas.rumus_luas_lingkaran()
             luas_lingkaran = 22 / 7 * radius ** 2
             print(f'22 / 7 x {radius} x {radius} = {luas_lingkaran:.2f}')
                 
             
         # luas segitiga
-        elif input_luas == 4:
+        elif input_luas == 5:
             alas: int
             tinggi: int
             alas, tinggi = rumus_luas.rumus_luas_segitiga()
@@ -120,7 +126,7 @@ while True:
             print(f'{alas} x {tinggi} / 2 = {luas_segitiga:.2f}')
             
         # luas trapesium
-        elif input_luas == 5:
+        elif input_luas == 6:
             atas: int
             bawah: int
             tinggi: int
@@ -129,15 +135,15 @@ while True:
             print(f'({atas} + {bawah}) x {tinggi} / 2 = {luas_trapesium:.2f}')
             
         # luas jajar genjang
-        elif input_luas == 6:
+        elif input_luas == 7:
             alas: int
             tinggi: int
             alas, tinggi = rumus_luas.rumus_luas_jajar_genjang()
             luas_jajar_genjang: int = alas * tinggi
-            print(f'{alas} x {tinggi} = {luas_jajar_genjang}')
+            print(f'{alas} x {tinggi} = {luas_jajar_genjang:.2f}')
         
         # luas layang-layang
-        elif input_luas == 7:
+        elif input_luas == 8:
             d1: int
             d2: int
             d1, d2 = rumus_luas.rumus_luas_layang_layang()
@@ -154,6 +160,23 @@ while True:
             
         # input keliling
         input_keliling: int = fungsi_input_pilih_keliling()
+    
+        # keluar
+        if input_keliling == 1:
+            break
+        
+        # keliling persegi
+        if input_keliling == 2:
+            sisi: int = rumus_keliling.rumus_keliling_persegi()
+            keliling_persegi: int = sisi * 4
+            print(f'{sisi} x 4 = {keliling_persegi}')
+        
+        # keliling persegi panjang
+        # elif input_keliling == 3:
+        #     panjang: int
+        #     lebar: int
+        #     panjang, lebar = 
+        
     else:
         print('Maaf operasi tidak tersedia.')  
 
