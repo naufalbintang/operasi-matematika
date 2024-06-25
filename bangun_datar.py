@@ -1,7 +1,7 @@
 '''module luas bangun datar'''
 
 # presegi 
-def rumus_luas_persegi() -> int:
+def persegi() -> int:
     while True:
         try:
             input_sisi: float = float(input('Masukkan panjang: '))
@@ -11,7 +11,7 @@ def rumus_luas_persegi() -> int:
     return input_sisi
 
 # presegi panjang
-def rumus_luas_persegi_panjang() -> int:
+def persegi_panjang() -> int:
     while True:
         try:
             input_panjang: float = float(input('Masukkan panjang: '))
@@ -27,7 +27,7 @@ def rumus_luas_persegi_panjang() -> int:
     return input_panjang, input_lebar
 
 # lingkaran
-def rumus_luas_lingkaran() -> int:
+def lingkaran() -> int:
     while True:
         try:
             input_radius: float = float(input('Masukkan radius: '))
@@ -37,7 +37,7 @@ def rumus_luas_lingkaran() -> int:
     return input_radius
 
 # segitiga
-def rumus_luas_segitiga() -> int:
+def segitiga() -> int:
     while True:
         try:
             input_alas: float = float(input('Masukkan alas: '))
@@ -53,7 +53,7 @@ def rumus_luas_segitiga() -> int:
     return input_alas, input_tinggi
 
 # trapesium
-def rumus_luas_trapesium() -> int:
+def trapesium() -> int:
     while True:
         try:
             input_atas: float = float(input('Masukkan panjang sisi atas: '))
@@ -76,7 +76,7 @@ def rumus_luas_trapesium() -> int:
         
 
 # jajar genjang
-def rumus_luas_jajar_genjang() -> int:
+def jajar_genjang() -> int:
     while True:
         try:
             input_alas: float = float(input('Masukkan panjang alas: '))
@@ -91,7 +91,7 @@ def rumus_luas_jajar_genjang() -> int:
             print('Tolong masukkan bilangan bulat.')
     return input_alas, input_tinggi
 # layang-layang
-def rumus_luas_layang_layang() -> int:
+def layang_layang() -> int:
     while True:
         try:
             input_d1: float = float(input('Masukkan panjang diagonal 1: '))
