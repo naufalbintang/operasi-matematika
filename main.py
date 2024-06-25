@@ -1,5 +1,6 @@
 import os
-import bangun_datar
+import luas_bangun_datar
+import keliling_bangun_datar
 
 def fungsi_input_pilih_operasi() -> int:
     while True:
@@ -97,7 +98,7 @@ while True:
         
         # luas persegi
         elif input_luas == 2:
-            sisi: int = bangun_datar.persegi()
+            sisi: int = luas_bangun_datar.persegi()
             luas_persegi: int = sisi ** 2
             print(f'{sisi} x {sisi} = {luas_persegi:.2f}')
             
@@ -105,13 +106,13 @@ while True:
         elif input_luas == 3:
             panjang: int
             lebar: int
-            panjang, lebar = bangun_datar.persegi_panjang()
+            panjang, lebar = luas_bangun_datar.persegi_panjang()
             luas_persegi_panjang: float = panjang * lebar
             print(f'{panjang} x {lebar} = {luas_persegi_panjang:.2f}')
 
         # luas lingkaran
         elif input_luas == 4:
-            radius: int = bangun_datar.lingkaran()
+            radius: int = luas_bangun_datar.lingkaran()
             luas_lingkaran = 22 / 7 * radius ** 2
             print(f'22 / 7 x {radius} x {radius} = {luas_lingkaran:.2f}')
                 
@@ -120,7 +121,7 @@ while True:
         elif input_luas == 5:
             alas: int
             tinggi: int
-            alas, tinggi = bangun_datar.segitiga()
+            alas, tinggi = luas_bangun_datar.segitiga()
             luas_segitiga: float = alas * tinggi / 2
             print(f'{alas} x {tinggi} / 2 = {luas_segitiga:.2f}')
             
@@ -129,7 +130,7 @@ while True:
             atas: int
             bawah: int
             tinggi: int
-            atas, bawah, tinggi = bangun_datar.trapesium()
+            atas, bawah, tinggi = luas_bangun_datar.trapesium()
             luas_trapesium: float = (atas + bawah) * tinggi / 2
             print(f'({atas} + {bawah}) x {tinggi} / 2 = {luas_trapesium:.2f}')
             
@@ -137,7 +138,7 @@ while True:
         elif input_luas == 7:
             alas: int
             tinggi: int
-            alas, tinggi = bangun_datar.jajar_genjang()
+            alas, tinggi = luas_bangun_datar.jajar_genjang()
             luas_jajar_genjang: int = alas * tinggi
             print(f'{alas} x {tinggi} = {luas_jajar_genjang:.2f}')
         
@@ -145,7 +146,7 @@ while True:
         elif input_luas == 8:
             d1: int
             d2: int
-            d1, d2 = bangun_datar.layang_layang()
+            d1, d2 = luas_bangun_datar.layang_layang()
             luas_layang_layang: float = d1 * d2 / 2 
             print(f'{d1} x {d2} / 2 = {luas_layang_layang:.2f}')
         else:
@@ -166,7 +167,7 @@ while True:
         
         # keliling persegi
         if input_keliling == 2:
-            sisi: float = bangun_datar.persegi()
+            sisi: float = keliling_bangun_datar.persegi()
             keliling_persegi: float = sisi * 4
             print(f'{sisi} x 4 = {keliling_persegi:.2f}')
         
@@ -174,9 +175,51 @@ while True:
         elif input_keliling == 3:
             panjang: int
             lebar: int
-            panjang, lebar = bangun_datar.persegi_panjang()
+            panjang, lebar = keliling_bangun_datar.persegi_panjang()
             keliling_persegi_panjang: float = (panjang + lebar) * 2
             print(f'({panjang} + {lebar}) x 2 = {keliling_persegi_panjang:.2f}')
+            
+        # keliling lingkaran
+        elif input_keliling == 4:
+            radius: float = keliling_bangun_datar.lingkaran()
+            keliling_lingkaran: float = 2 * 22 / 7 * radius
+            print(f'2 * 22 / 7 * {radius} = {keliling_lingkaran:.2f}')
+            
+        # keliling segitiga
+        elif input_keliling == 5:
+            sisi_1: float
+            sisi_2: float
+            sisi_3: float
+            sisi_1, sisi_2, sisi_3 = keliling_bangun_datar.segitiga()
+            keliling_segitiga: float = sisi_1 + sisi_2 + sisi_3
+            print(f'{sisi_1} + {sisi_2} + {sisi_3} = {keliling_segitiga}')
+        
+        # keliling trapesium
+        elif input_keliling == 6:
+            sisi_1: float
+            sisi_2: float
+            sisi_3: float
+            sisi_4: float
+            sisi_1, sisi_2, sisi_3, sisi_4 = keliling_bangun_datar.trapesium()
+            keliling_trapesium: float = sisi_1 + sisi_2 + sisi_3 + sisi_4
+            print(f'{sisi_1} + {sisi_2} + {sisi_3} + {sisi_4} = {keliling_trapesium}')
+                
+        
+        # keliling jajar genjang
+        elif input_keliling == 7:
+            sisi_1: float
+            sisi_2: float
+            sisi_1, sisi_2 = keliling_bangun_datar.jajar_genjang()
+            keliling_jajar_genjang: float = (sisi_1 + sisi_2) * 2
+            print(f'({sisi_1} + {sisi_2}) x 2  =  {keliling_jajar_genjang}')
+        
+        # keliling layang-layang
+        elif input_keliling == 8:
+            sisi_1: float
+            sisi_2: float
+            sisi_1, sisi_2 = keliling_bangun_datar.layang_layang()
+            keliling_layang_layang: float = (sisi_1 + sisi_2) * 2
+            print(f'({sisi_1} + {sisi_2}) x 2  =  {keliling_layang_layang}')
         
     else:
         print('Maaf operasi tidak tersedia.')  
@@ -192,3 +235,4 @@ while True:
     else:
         print('Invalid input, exiting program.')
         break
+    
